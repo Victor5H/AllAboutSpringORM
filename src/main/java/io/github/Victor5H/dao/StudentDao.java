@@ -7,7 +7,7 @@ import java.util.List;
 public interface StudentDao {
     int insert(Student student);
     boolean delete(int id);
-    int update(Student student);
+    void update(Student student);
     List<Student> selectAll();
     Student selectOne(int id);
 
