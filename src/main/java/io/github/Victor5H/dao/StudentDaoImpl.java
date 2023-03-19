@@ -52,13 +52,24 @@ public class StudentDaoImpl implements StudentDao {
         //return (Integer) hibernateTemplate.save(student);
     }
 
+    @Override
+    public boolean insertAll(List<Student> list) {
+        int count = 0;
+        for (Student s :
+                list) {
+            insert(s);
+            count++;
+        }
+        return count == list.size();
+    }
+
     @Transactional
     public boolean delete(int id) {
         Student s = selectOne(id);
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        if (s== null){
-            System.out.println("Student not present");
+        if (s == null) {
+            System.out.println("No student with id " + id);
             return false;
         }
         session.delete(s);
@@ -76,7 +87,7 @@ public class StudentDaoImpl implements StudentDao {
     public void update(Student student) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        int ret = (Integer) session.save(student);
+        session.update(student);
         session.getTransaction().commit();
 //        return ret;
 
@@ -84,13 +95,13 @@ public class StudentDaoImpl implements StudentDao {
     }
 
     public List<Student> selectAll() {
-        return sessionFactory.openSession().createQuery("from student",Student.class).list();
+        return sessionFactory.openSession().createQuery("from student", Student.class).list();
 //        return hibernateTemplate.loadAll(Student.class);
     }
 
     public Student selectOne(int id) {
         Session session = sessionFactory.openSession();
-        Student s= session.get(Student.class,id);
+        Student s = session.get(Student.class, id);
         return s;
 //        return hibernateTemplate.get(Student.class, id);
     }

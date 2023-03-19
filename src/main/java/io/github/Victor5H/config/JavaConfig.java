@@ -21,28 +21,33 @@ public class JavaConfig {
     public HibernateTemplate getTemplate() {
         HibernateTemplate hibernateTemplate = new HibernateTemplate();
         hibernateTemplate.setSessionFactory(getSessionFactoryBean().getObject());
+        hibernateTemplate.setCheckWriteOperations(false);
         return hibernateTemplate;
     }
 
     @Bean
     public DataSource getDataSource() {
+        System.out.println("data source start");
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/springorm");
         dataSource.setUsername("root");
         dataSource.setPassword("root");
+        System.out.println("data source end");
         return dataSource;
     }
 
     @Bean("studentDao")
     public StudentDaoImpl getStudentDao() {
+        System.out.println("student dao start");
         StudentDaoImpl studentDao = new StudentDaoImpl(getTemplate());
-
+        System.out.println("student dao end");
         return studentDao;
     }
 
     @Bean("sessionfactory")
     public LocalSessionFactoryBean getSessionFactoryBean() {
+        System.out.println("session factory start");
         LocalSessionFactoryBean localSessionFactoryBean = new LocalSessionFactoryBean();
 //        settings data source 1
         localSessionFactoryBean.setDataSource(getDataSource());
@@ -57,14 +62,17 @@ public class JavaConfig {
 
 //        3
         localSessionFactoryBean.setHibernateProperties(properties);
+        System.out.println("session factory end");
         return localSessionFactoryBean;
     }
 
     @Bean
     public HibernateTransactionManager hibernateTransactionManager() {
+        System.out.println("transaction manager start");
         SessionFactory factory = getSessionFactoryBean().getObject();
         HibernateTransactionManager transactionManager = new HibernateTransactionManager();
         transactionManager.setSessionFactory(factory);
+        System.out.println("transaction manager end");
         return transactionManager;
     }
 }

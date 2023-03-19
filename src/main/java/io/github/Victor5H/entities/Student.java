@@ -3,13 +3,13 @@ package io.github.Victor5H.entities;
 import javax.persistence.*;
 
 // All part of hibernate
-@Entity(name="student")
-@Table(name="student")
+@Entity(name = "student")
+@Table(name = "student")
 public class Student {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int roll;
-    @Column(name ="name")//not necessary
+    @Column(name = "name")//not necessary
     private String name;
     private double height;
 
@@ -18,7 +18,8 @@ public class Student {
         this.name = name;
         this.height = height;
     }
-    public Student( String name, double height) {
+
+    public Student(String name, double height) {
         this.name = name;
         this.height = height;
     }

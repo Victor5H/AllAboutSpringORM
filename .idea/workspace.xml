@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d19334b-213e-4cc1-b6e1-cc078abc5143" name="Changes" comment="implemented CRUD operations using sessionFactory">
+    <list default="true" id="5d19334b-213e-4cc1-b6e1-cc078abc5143" name="Changes" comment="student object mapped, yet to convert into command line application">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/config/JavaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/config/JavaConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/dao/StudentDao.java" afterDir="false" />
@@ -94,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678800423236</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="student object mapped, yet to convert into command line application">
+      <created>1679173345836</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679173345836</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +117,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="implemented CRUD operations using sessionFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented CRUD operations using sessionFactory" />
+    <MESSAGE value="student object mapped, yet to convert into command line application" />
+    <option name="LAST_COMMIT_MESSAGE" value="student object mapped, yet to convert into command line application" />
   </component>
 </project>
