@@ -16,7 +16,7 @@ public class App {
     public static void main(String[] args) {
         ApplicationContext con = new AnnotationConfigApplicationContext(JavaConfig.class);
         studentDao = con.getBean("studentDao", StudentDao.class);
-        String menuBorder = "---------------------";
+        String menuBorder = "--------------------------------------";
         String menu = "1) Insert new Student\n2) Insert multiple student\n3) Update existing student\n4) Delete student\n5) Select one student\n6) Display all students\n7) Exit\nEnter your choice:";
         sc = new Scanner(System.in).useDelimiter("\n");
         int ch;
@@ -77,13 +77,13 @@ public class App {
                     if (s == null) {
                         System.out.println("No student with id " + id);
                     } else {
-                        System.out.println(s);
+                        printStudent(s);
                     }
                     break;
                 case 6:
                     System.out.println(menuBorder);
                     System.out.println("Select all Students:");
-                    studentDao.selectAll().forEach(System.out::println);
+                    studentDao.selectAll().forEach(App::printStudent);
                     break;
                 case 7:
                     System.exit(0);
@@ -94,6 +94,12 @@ public class App {
         }
 
 
+    }
+    public static void printStudent(Student s){
+        System.out.println("--------------------------------------");
+        System.out.println("ID: "+s.getRoll());
+        System.out.println("Name: "+s.getName());
+        System.out.println("Height: "+s.getHeight());
     }
 
     public static void insert() {

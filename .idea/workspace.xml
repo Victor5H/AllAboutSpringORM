@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d19334b-213e-4cc1-b6e1-cc078abc5143" name="Changes" comment="student object mapped, yet to convert into command line application">
+    <list default="true" id="5d19334b-213e-4cc1-b6e1-cc078abc5143" name="Changes" comment="Command line application developed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/config/JavaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/config/JavaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/dao/StudentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/dao/StudentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/entities/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/Victor5H/entities/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679173345836</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Command line application developed">
+      <created>1679202745178</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679202745178</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +121,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="implemented CRUD operations using sessionFactory" />
     <MESSAGE value="student object mapped, yet to convert into command line application" />
-    <option name="LAST_COMMIT_MESSAGE" value="student object mapped, yet to convert into command line application" />
+    <MESSAGE value="Command line application developed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Command line application developed" />
   </component>
 </project>
